@@ -18,22 +18,11 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: inherit;
-}
+h1,h2,h3,h4,h5,h6 { color: inherit; }
 
-img {
-  object-fit: cover;
-}
+img { object-fit: cover; }
 
-li {
-  list-style: none;
-}
+li { list-style: none; }
 
 a {
   text-decoration: none;
@@ -64,17 +53,10 @@ header {
   }
 }
 
-.fig-logo {
-  /*figure da logo*/
-  height: 100%;
-}
-#logo {
-  height: 100%;
-}
+.fig-logo { height: 100%; }
+#logo { height: 100%; }
 
-header nav {
-  width: 40%;
-}
+header nav { width: 40%; }
 
 .nav {
   display: flex;
@@ -104,30 +86,24 @@ header nav {
   color: #fcfcfc;
 }
 
-.nav_item a:active {
-  background-color: rgba(31, 111, 191, 0.5);
-}
+.nav_item a:active { background-color: rgba(31, 111, 191, 0.5); }
 
 /* --------- TELA PRINCIPAL ----------- */
 
-main {
-  margin-top: 10vh;
-}
+main { margin-top: 10vh; }
 
 #tela_main {
   position: relative;
   background: #e8f0f2;
   
   & .container {
-      height: 65vh;
+    height: 65vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  & section{
-    display: flex;
-  }
+  & section{ display: flex; }
 
 }
 
