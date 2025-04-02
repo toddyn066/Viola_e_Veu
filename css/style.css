@@ -289,7 +289,7 @@ main {
 .card_tela03 {
   width: 30%;
   height: 100%;
-  background-color: #fff;
+  background-color: #f5e5c4cc;
   border-radius: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -317,8 +317,8 @@ main {
     justify-content: center;
     position: absolute;
     top: 0;
-    text-wrap: wrap;
     font-size: 2.5rem;
+    font-weight: 600;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -332,3 +332,87 @@ main {
     opacity: 1;
   }
 }
+
+/* -Footer---------------------------------------------------------------------------------------------------- */
+footer {
+  background: #343333;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px -5px 5px #A08E6B);
+  color: #fff;
+  min-height: 27rem;
+  position: absolute;
+  left: 0;
+
+  & .direitos-reservados {
+    grid-area: direitos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+
+    & h4:nth-child(1){
+      font-size: 1.4rem;
+      color: #adadad;
+      font-style: italic;
+    }
+    
+    & h4 a{
+      filter: drop-shadow(3px 3px 2px rgba(255, 0, 0, 0.374));
+     
+      &:hover{
+        transition: all 0.5s;
+        font-size: 1.8rem;
+        transform: scale3d(1,1,1);
+        color: red;
+      }
+    }
+  }
+
+  & .titulo {
+    text-align: center;
+    font-size: 2.8rem;
+    -webkit-text-stroke: 0.5px #00000064;
+    text-shadow: 2px 2px 8px #aaa;
+  }
+
+  & .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 15px;   
+    gap: 0.5rem; 
+  }
+
+}
+
+#content {
+  display: grid;
+  width: min(100% - 3rem, 1200px);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  grid-template-rows: 1fr 25px 1fr 5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      'direitos direitos '
+      'titulo-1 titulo-2 '
+      'conteudo-1 conteudo-2';
+  
+    & p{
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 12px #777 ;
+    }
+    & p a:hover{
+      color: rgba(230, 192, 37, 0.421);
+      text-shadow: 2px 2px 7px rgba(255, 255, 255, 0.608);
+    }
+}
+
+.titulo.um {grid-area: titulo-1;}
+.conteudo.um {grid-area: conteudo-1;}
+.titulo.dois {grid-area: titulo-2;}
+.conteudo.dois {grid-area: conteudo-2;}
