@@ -156,6 +156,7 @@ main {
   &.text {
     width: 60%;
     border-radius: 0 150rem 25rem 0;
+    line-height: 1.5;
   }
 }
 .sect-img_main {
@@ -176,15 +177,35 @@ main {
   height: 15%;
   width: 100%;
   z-index: 1;
+  left: 0;
 
   &.tela_02 {
     top: 0;
-    left: 0;
     background: rgb(255, 255, 255);
     background: linear-gradient(
       180deg,
       rgba(199, 199, 194, 0.624) 4%,
       rgba(228, 228, 228, 0) 75%
+    );
+  }
+  &.ternos{
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      #cab89357 4%,
+      #cab8932c 22%,
+      #5c4e3e50 45%
+    );
+  }
+  &.vestidos{
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      #5c4e3e50 4%,
+      #5c4e3e2c 22%,
+      #cab89357 45% 
     );
   }
 }
@@ -237,20 +258,17 @@ main {
 
 .text-tela02 {
   padding-left: 5rem;
+  line-height: 1.5;
+  text-align: center;
   
   & h2 {
-    text-align: center;
     margin-bottom: 2rem;
-  }
-  & p{
-    text-align: justify;
-    text-indent: 3rem;
   }
 }
 
 /* ------ Tela 03 ---------- */
 
-#tela_03 {
+#espacos {
   background: #f0f0f0;
   position: relative;
 
@@ -262,8 +280,9 @@ main {
 
 }
 
-.text-tela03 {
+.text-espacos {
   text-align: center;
+  line-height: 1.5;
 
   & h2 {
     margin-bottom: 2rem;
@@ -271,7 +290,7 @@ main {
 
 }
   
-.cards_tela03{
+.cards_espacos{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -279,7 +298,7 @@ main {
   height: 60%;
   padding: 0 5rem;
 }
-.card_tela03 {
+.card_espacos {
   width: 30%;
   height: 100%;
   background-color: #f5e5c4cc;
@@ -329,6 +348,136 @@ main {
 .description h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* -------------- Música --------------- */
+
+#musicas {
+  background: #fff;
+
+  & .container {
+    height: 60vh;
+    justify-content: space-between;
+  }
+}
+
+.text-musicas {
+  text-align: left;
+  line-height: 1.5;
+  width: 30%;
+  & h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.cards-musicas {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  height: 80%;
+}
+
+.card-musicas {
+  width: 100%;
+  height: 30%;
+  background-color: #78512ed7;
+  color: #ddd;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+
+  & .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+
+    & p{
+      align-items: left;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.card_musicas_img{
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+  border-radius: 2rem 0 0 2rem;
+  margin-right: 1rem;
+  & img{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+/* -------------- Vestidos e Ternos ------------- */
+
+#vestidos, #ternos {
+  position: relative;
+  & .container {
+    height: 60vh;
+    justify-content: space-evenly;
+  }
+}
+#vestidos {
+  background: #CAB893;
+}
+#ternos{
+  background: #5C4E3E;
+}
+
+.cards-vestidos, .cards-ternos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 50%;
+}
+
+.card-vestidos, .card-ternos {
+  width: 20%;
+  height: 90%;
+  background-color: #f5e5c4cc;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+    & figure{
+      overflow: hidden;
+      border-radius: 1.5rem 1.5rem 0 0;
+      margin-bottom: 1rem;
+      height: 100%;
+      
+      & img {
+        height: 100%;
+        width: 100%; 
+      } 
+      
+    }
+}
+
+.text-vestidos, .text-ternos {
+  width: 30%;
+  line-height: 1.5;
+
+  & h2 {
+    margin-bottom: 2rem;
+  }
+}
+.text-vestidos{
+  text-align: right;
+}
+.text-ternos{
+  text-align: left;
+  color: #fff;
 }
 
 /* -------------- Contatos ------------ */
