@@ -18,17 +18,11 @@ body {
   color: #333;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  color: inherit;
-}
+h1,h2,h3,h4,h5,h6 { color: inherit; }
 
-h2{
-  font-size: 3.6rem;
-}
+h2{ font-size: 3.6rem; }
 
-p{
-  font-size: 1.6rem;
-}
+p{ font-size: 1.6rem; }
 
 img { object-fit: cover; }
 
@@ -52,7 +46,7 @@ a {
 header {
   background-color: #fff;
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -66,16 +60,9 @@ header {
   }
 }
 
-.fig-logo {
-  height: 100%;
-}
-#logo {
-  height: 100%;
-}
+.fig-logo, #logo { height: 100%; }
 
-header nav {
-  width: 40%;
-}
+header nav { width: 40%; }
 
 .nav {
   display: flex;
@@ -85,10 +72,7 @@ header nav {
   height: 100%;
 }
 
-.nav_item {
-  filter: drop-shadow(5px 5px 8px #7777775f);
-}
-
+.nav_item { filter: drop-shadow(5px 5px 8px #7777775f); }
 .nav_item a {
   display: block;
   width: 100%;
@@ -106,28 +90,17 @@ header nav {
   background-color: #57442a80;
   color: #fcfcfc;
 }
+.nav_item a:active { background-color: rgba(84, 61, 22, 0.814); }
 
-.nav_item a:active {
-  background-color: rgba(84, 61, 22, 0.814);
-}
+main { margin-top: 10vh; } 
 
 /* --------- TELA PRINCIPAL ----------- */
 
-main {
-  margin-top: 10vh;
-}
+#tela_main { position: relative; background: #e8f0f2;
 
-#tela_main {
-  position: relative;
-  background: #e8f0f2;
+  & .container { height: 75vh; }
 
-  & .container {
-    height: 75vh;
-  }
-
-  & section {
-    display: flex;
-  }
+  & section { display: flex; }
 
   & h1 {
     font-size: 8rem;
@@ -179,7 +152,7 @@ main {
   z-index: 1;
   left: 0;
 
-  &.tela_02 {
+  &.apresentacao {
     top: 0;
     background: rgb(255, 255, 255);
     background: linear-gradient(
@@ -210,30 +183,26 @@ main {
   }
 }
 
-/* -------- Tela 02 ----------- */
+/* -------- Apresentação ----------- */
 
-#tela_02 {
+#apresentacao {
   background: #ffedbf;
   position: relative;
   padding: 2rem 0;
 
-  & .container {
-    height: 70vh;
-  }
+  & .container { height: 70vh; }
 
-  & section {
-    width: 50%;
-  }
+  & section { width: 50%; }
 }
 
-.sect-imgs_tela02 {
+.sect-imgs_apresentacao {
   height: 90%;
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
-.fig_tela02 {
+.fig_apresentacao {
   height: 90%;
   width: 90%;
   position: relative;
@@ -256,7 +225,7 @@ main {
   }
 }
 
-.text-tela02 {
+.text-apresentacao {
   padding-left: 5rem;
   line-height: 1.5;
   text-align: center;
@@ -266,11 +235,10 @@ main {
   }
 }
 
-/* ------ Tela 03 ---------- */
+/* ------ Espeaços ---------- */
 
 #espacos {
   background: #f0f0f0;
-  position: relative;
 
   & .container {
     height: 90vh;
@@ -284,10 +252,7 @@ main {
   text-align: center;
   line-height: 1.5;
 
-  & h2 {
-    margin-bottom: 2rem;
-  }
-
+  & h2 { margin-bottom: 2rem; }
 }
   
 .cards_espacos{
@@ -298,6 +263,7 @@ main {
   height: 60%;
   padding: 0 5rem;
 }
+
 .card_espacos {
   width: 30%;
   height: 100%;
@@ -340,14 +306,58 @@ main {
     opacity: 0;
     transition: .3s;
   }
-  &:hover figcaption{
-    opacity: 1;
-  }
+  &:hover figcaption{ opacity: 1; }
 }
 
 .description h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* ------------ CARROSSEL ------------- */
+
+#carrossel {
+  background: #3C352B;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%; 
+  height: 55%;
+}
+
+.carousel-wrapper {
+  display: flex;
+  height: 100%;
+  width: calc(100% * 3); /* Largura total para 3 imagens (ajuste conforme o número de slides) */
+  transition: transform 15s ease-in-out;
+  transform: translateX(0); /* Posição inicial */
+}
+
+.carousel-slide {
+  flex: 0 0 calc(100% / 3); /* Cada slide ocupa a largura visível */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100% / 3);
+  height: 100%;
+  
+  & figure{
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    /* border-radius: 2rem; */
+    filter: drop-shadow(0px 0px 5px #a17e60d7);
+  }
+  & img{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
 }
 
 /* -------------- Música --------------- */
@@ -424,12 +434,8 @@ main {
     justify-content: space-evenly;
   }
 }
-#vestidos {
-  background: #CAB893;
-}
-#ternos{
-  background: #5C4E3E;
-}
+#vestidos { background: #CAB893; }
+#ternos{ background: #5C4E3E; }
 
 .cards-vestidos, .cards-ternos {
   display: flex;
@@ -460,7 +466,6 @@ main {
         height: 100%;
         width: 100%; 
       } 
-      
     }
 }
 
@@ -468,13 +473,9 @@ main {
   width: 30%;
   line-height: 1.5;
 
-  & h2 {
-    margin-bottom: 2rem;
-  }
+  & h2 { margin-bottom: 2rem; }
 }
-.text-vestidos{
-  text-align: right;
-}
+.text-vestidos{ text-align: right; }
 .text-ternos{
   text-align: left;
   color: #fff;
@@ -484,8 +485,6 @@ main {
 
 #contatos {
   background: #fff;
-  position: relative;
-  padding: 2rem 0;
 
   & .container {
     height: 50vh;
@@ -496,9 +495,7 @@ main {
 
 .text-contatos {
   text-align: center;
-  & h2 {
-    margin-bottom: 2rem;
-  }
+  & h2 { margin-bottom: 2rem; }
 }
 
 .cards-contatos{
@@ -519,13 +516,10 @@ main {
   justify-content: space-between;
   align-items: center;
   
-  & .description{
-    text-align: center;
-  }
+  & .description{ text-align: center; }
 }
 
 .card_contatos_img{
-  /* border: 2px solid #d1bfa7; */
   border-radius: 50%;
   padding: 1rem;
   background-color: #000000c0;
@@ -606,7 +600,7 @@ footer {
     }
     & p a:hover{
       color: rgba(230, 192, 37, 0.421);
-      text-shadow: 2px 2px 7px rgba(255, 255, 255, 0.608);
+      text-shadow: 2px 2px 7px #ffffff9b;
     }
 }
 
