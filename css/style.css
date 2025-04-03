@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -15,12 +16,18 @@ html {
 body {
   background-color: #f0f0f0;
   color: #333;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6 {
   color: inherit;
+}
+
+h2{
+  font-size: 3.6rem;
+}
+
+p{
+  font-size: 1.6rem;
 }
 
 img { object-fit: cover; }
@@ -92,6 +99,8 @@ header nav {
   background-color: #d1bfa78a;
   transition: 0.3s;
   border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .nav_item a:hover {
   background-color: #57442a80;
@@ -99,7 +108,7 @@ header nav {
 }
 
 .nav_item a:active {
-  background-color: rgba(31, 111, 191, 0.5);
+  background-color: rgba(84, 61, 22, 0.814);
 }
 
 /* --------- TELA PRINCIPAL ----------- */
@@ -168,17 +177,6 @@ main {
   width: 100%;
   z-index: 1;
 
-  &.main {
-    bottom: 0;
-    left: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(143, 143, 116, 0.624) 4%,
-      rgba(19, 19, 19, 0) 75%
-    );
-  }
-
   &.tela_02 {
     top: 0;
     left: 0;
@@ -243,11 +241,9 @@ main {
   & h2 {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 4rem;
   }
   & p{
     text-align: justify;
-    font-size: 2rem;
     text-indent: 3rem;
   }
 }
@@ -270,12 +266,9 @@ main {
   text-align: center;
 
   & h2 {
-    font-size: 4rem;
     margin-bottom: 2rem;
   }
-  & p {
-    font-size: 2rem;
-   }
+
 }
   
 .cards_tela03{
@@ -333,7 +326,63 @@ main {
   }
 }
 
-/* -Footer---------------------------------------------------------------------------------------------------- */
+.description h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------- Contatos ------------ */
+
+#contatos {
+  background: #fff;
+  position: relative;
+  padding: 2rem 0;
+
+  & .container {
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.text-contatos {
+  text-align: center;
+  & h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.cards-contatos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  padding: 0 5rem;
+}
+
+.card-contatos{
+  width: 30%;
+  height: auto;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  & .description{
+    text-align: center;
+  }
+}
+
+.card_contatos_img{
+  /* border: 2px solid #d1bfa7; */
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #000000c0;
+}
+
+/* ------------- Footer ------------- */
 footer {
   background: #343333;
   width: 100%;
